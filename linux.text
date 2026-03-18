@@ -1,0 +1,220 @@
+
+Learning basic Linux commands is essential for managing and navigating the
+Linux filesystem,performing file operations, editing text files, 
+and managing file permissions.This section covers commands for navigating
+the filesystem, file manipulation, text editing, and managing permissions 
+and ownership in both RedHat and Ubuntu Linux.
+
+Navigating the Filesystem
+    1.ls (List Directory Contents):
+        The ls command lists files and directories in the current working directory.
+        ex: ls
+        To list hidden files (files starting with a dot .):
+        ls -a
+        To list detailed information (permissions, owner, size, etc.):
+        ls -l
+        Combine options (show hidden files in detailed format):
+        ls -la
+
+    2. cd (Change Directory):
+        The cd command is used to navigate between directories.
+        Example:
+
+        To change to the /home directory:
+        cd /home
+        To go back to the previous directory:
+        cd -
+        To navigate up one level in the directory tree:
+        cd ..
+
+    3.pwd (Print Working Directory):
+
+        The pwd command shows the current working directory.
+        Example:
+
+        pwd
+        Output:
+
+        /home/user
+
+    4. find (Search for Files and Directories):
+
+        find is used to search for files and directories based on criteria like name, size, modification time, etc.
+        Example: To find files named "test.txt" in the /home directory:
+            find /home -name "test.txt"
+            locate (Find Files by Name):
+
+    5.The locate command is a faster alternative to find, using a pre-built index to search files.
+    Example:locate test.txt
+
+File Operations
+    1.cp (Copy Files and Directories):
+
+    Copies files and directories from one location to another.
+    Example:
+
+    To copy a file:
+    cp file1.txt /path/to/destination/
+    To copy a directory and its contents:
+    cp -r /source/directory /path/to/destination/
+mv (Move or Rename Files):
+
+Moves or renames files and directories.
+Example:
+
+To rename a file:
+mv oldname.txt newname.txt
+To move a file to another directory:
+mv file1.txt /path/to/destination/
+
+rm (Remove Files and Directories):
+
+Deletes files and directories.
+Example:
+
+To remove a file:
+rm file1.txt
+To remove a directory and its contents:
+rm -r /path/to/directory/
+touch (Create Empty Files):
+
+Creates an empty file or updates the timestamp of an existing file.
+Example:
+
+touch newfile.txt
+mkdir (Make Directory):
+
+Creates a new directory.
+Example:
+
+mkdir new_directory
+To create a nested directory structure:
+mkdir -p /path/to/new_directory/sub_directory
+rmdir (Remove Empty Directory):
+
+Deletes an empty directory.
+Example:
+
+rmdir empty_directory
+cat (Concatenate and Display File Contents):
+
+Displays the contents of a file.
+Example:
+
+cat file.txt
+more and less (Paging Through File Contents):
+
+more and less allow you to view large files one screen at a time.
+Example:
+
+more largefile.txt
+less largefile.txt
+
+Working with Text Files
+nano (Simple Text Editor):
+
+nano is a straightforward, user-friendly text editor for command-line environments.
+Example:
+
+To create or edit a file using nano:
+nano newfile.txt
+Inside nano, use Ctrl + O to save and Ctrl + X to exit.
+vi or vim (Advanced Text Editor):
+
+vi (or its enhanced version vim) is a powerful text editor with modes for editing and command execution.
+Example:
+
+To open a file using vi:
+vi file.txt
+In vi, press i to enter insert mode (for editing).
+Press Esc to exit insert mode and return to command mode.
+To save and exit:
+:wq
+
+head (View the First Few Lines of a File):
+
+Displays the first 10 lines of a file by default.
+Example:
+
+head file.txt
+tail (View the Last Few Lines of a File):
+
+Displays the last 10 lines of a file by default. Useful for monitoring log files.
+Example:
+
+tail file.txt
+To continuously view updates to a file (useful for logs):
+tail -f logfile.log
+
+Permissions and Ownership
+Linux uses a permission model to control who can read, write, and execute files and directories. Every file has an owner and a group associated with it, and permissions for the owner, group, and others.
+
+File Permissions Format:
+
+Permissions are displayed as a string of 10 characters (e.g., -rwxr-xr--):
+The first character indicates whether it’s a directory (d) or a file (-).
+The next three characters represent owner permissions (r = read, w = write, x = execute).
+The next three represent group permissions.
+The last three represent others permissions.
+chmod (Change File Permissions):
+
+chmod is used to change the read (r), write (w), and execute (x) permissions of a file.
+Examples:
+
+Grant read, write, and execute permissions to the file owner, read and execute permissions to the group, and no permissions to others:
+chmod 750 file.txt
+Breakdown of 750:
+
+7 (owner) = read (4) + write (2) + execute (1) = 7
+
+5 (group) = read (4) + execute (1) = 5
+
+0 (others) = no permissions
+
+To give all users (owner, group, and others) read and write permissions:
+
+chmod 666 file.txt
+chown (Change File Ownership):
+
+chown changes the owner of a file or directory.
+Example:
+
+To change the owner of a file to user john:
+chown john file.txt
+To change both the owner and group:
+chown john:admin file.txt
+chgrp (Change Group Ownership):
+
+chgrp changes the group ownership of a file or directory.
+Example:
+
+chgrp admin file.txt
+
+
+Examples
+1. Create a Directory in RedHat and Ubuntu
+Create a directory:
+mkdir my_directory
+Create a nested directory structure:
+mkdir -p parent_directory/child_directory
+2. Create, Edit, and Delete Files Using nano and vi in RedHat and Ubuntu
+Create a file using nano:
+
+nano newfile.txt
+Add some text, then save with Ctrl + O and exit with Ctrl + X.
+Create a file using vi:
+
+vi newfile.txt
+Press i to enter insert mode, type some text, then press Esc to return to command mode.
+Save and exit with :wq.
+Delete the file:
+
+rm newfile.txt
+3. Change File Permissions Using chmod
+1
+
+. Give the owner read, write, and execute permissions, the group read and execute permissions, and others no permissions:
+
+chmod 750 script.sh
+Allow everyone to read and write a file:
+chmod 666 document.txt
