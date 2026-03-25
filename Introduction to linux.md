@@ -1,4 +1,5 @@
 1.Introduction to Linux
+
 What is Linux?
 Linux is a free and open-source operating system (OS) based on Unix. It was created by Linus Torvalds in 1991 as a personal project but has since evolved into a robust, enterprise-grade OS that powers everything from servers, cloud environments, smartphones, supercomputers, to embedded devices.
 
@@ -52,6 +53,8 @@ For Enterprise Use (Servers): RedHat is widely used in enterprise environments, 
 For Developers and Tinkerers: Fedora or Debian might be a good fit for developers who want access to the latest software or want a more hands-on experience with the OS.
 
 Choosing Your Linux Distribution
+
 RedHat: If you're looking to build a career in enterprise Linux administration, RedHat is a strong choice. It’s perfect for environments where stability, security, and support are critical.
+
 Ubuntu: For personal use, web development, or cloud infrastructure, Ubuntu offers a great balance between usability and power. It’s also widely used in cloud environments and is a good starting point for beginners.
 Both RedHat and Ubuntu are versatile operating systems, and you can experiment with each one to find out which suits your needs best. In the next sections of the tutorial, we will dive deeper into Linux commands, package management, and system administration tasks to help you gain expertise in managing both RedHat and Ubuntu environments.
