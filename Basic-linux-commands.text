@@ -6,6 +6,7 @@ the filesystem, file manipulation, text editing, and managing permissions
 and ownership in both RedHat and Ubuntu Linux.
 
 Navigating the Filesystem
+
     1.ls (List Directory Contents):
         The ls command lists files and directories in the current working directory.
         ex: ls
@@ -17,6 +18,7 @@ Navigating the Filesystem
         ls -la
 
     2. cd (Change Directory):
+    
         The cd command is used to navigate between directories.
         Example:
 
@@ -48,6 +50,7 @@ Navigating the Filesystem
     Example:locate test.txt
 
 File Operations
+
     1.cp (Copy Files and Directories):
 
     Copies files and directories from one location to another.
@@ -211,9 +214,8 @@ Delete the file:
 
 rm newfile.txt
 3. Change File Permissions Using chmod
-1
 
-. Give the owner read, write, and execute permissions, the group read and execute permissions, and others no permissions:
+1. Give the owner read, write, and execute permissions, the group read and execute permissions, and others no permissions:
 
 chmod 750 script.sh
 Allow everyone to read and write a file:
