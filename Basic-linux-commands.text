@@ -51,7 +51,7 @@ Navigating the Filesystem
 
 File Operations
 
-    1.cp (Copy Files and Directories):
+cp (Copy Files and Directories):
 
     Copies files and directories from one location to another.
     Example:
